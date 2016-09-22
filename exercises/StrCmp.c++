@@ -24,7 +24,7 @@ INSTANTIATE_TEST_CASE_P (
     Str_Cmp_Fixture,
     Values(
            strcmp,
-        my_strcmp));
+       my_strcmp));
 
 TEST_P (Str_Cmp_Fixture, test_1) {
 	ASSERT_EQ(GetParam()("abc", "abc"), 0);}
@@ -108,3 +108,4 @@ Running main() from gtest_main.cc
 [==========] 20 tests from 1 test case ran. (0 ms total)
 [  PASSED  ] 20 tests.
 */
+

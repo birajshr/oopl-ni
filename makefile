@@ -119,10 +119,17 @@ sync:
     --include "Exceptions2.c++"              \
     --include "Exceptions3.c++"              \
     --include "Operators.c++"                \
+    --include "Variables.c++"                \
     --include "Types.c++"                    \
     --include "Representations.c++"          \
-    --include "Variables.c++"                \
     --include "Arguments.c++"                \
+    --include "Cache.c++"                    \
+    --include "Returns.c++"                  \
+    --include "Iteration.c++"                \
+    --include "Auto.c++"                     \
+    --include "Initializations.c++"          \
+    --include "InitializerList.c++"          \
+    --include "Iterators.c++"                \
     --exclude "*"                            \
     ../../../examples/c++/ examples
 	@rsync -r -t -u -v --delete              \
@@ -131,8 +138,13 @@ sync:
     --include "IsPrime2.c++"                 \
     --include "IsPrime2.h"                   \
     --include "StrCmp.c++"                   \
+    --include "StrCmp.h"                     \
     --include "Equal.c++"                    \
+    --include "Equal.h"                      \
     --include "Incr.c++"                     \
+    --include "Copy.c++"                     \
+    --include "Fill.c++"                     \
+    --include "AllOf.c++"                    \
     --exclude "*"                            \
     ../../../exercises/c++/ exercises
 
@@ -157,9 +169,9 @@ versions:
 	@echo
 	ls -ald $(INCLUDE)/gtest
 	@echo
-	ls -al $(LIB)/*boost*
+	ls -al /usr/lib/*boost*.a
 	@echo
-	ls -al $(LIB)/*gtest*
+	ls -al $(LIB)/*gtest*.a
 	@echo
 	which $(CLANG-CHECK)
 	-$(CLANG-CHECK) --version

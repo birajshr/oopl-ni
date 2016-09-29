@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 int my_strcmp(const char* string1, const char* string2)
 {
 	const unsigned char* char1 = (const unsigned char*)string1;
@@ -18,20 +17,5 @@ int my_strcmp(const char* string1, const char* string2)
 	if (*char1 == '\0' && *char2 == '\0') return 0;
 	if (*char1 == '\0') return (0 - *char2);
 	if (*char2 == '\0') return (*char1);
+	return 0;
 }
-=======
-// --------
-// StrCmp.h
-// --------
-
-#ifndef StrCmp_h
-#define StrCmp_h
-
-int my_strcmp (const char* a, const char* b) {
-    while ((*a != 0) && (*a == *b)) {
-        ++a;
-        ++b;}
-    return *a - *b;}
-
-#endif // StrCmp_h
->>>>>>> f1087e62ea386ecb7b6c7b26005836537216a401
